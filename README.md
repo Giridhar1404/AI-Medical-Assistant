@@ -53,3 +53,11 @@ echo "OPENROUTER_API_KEY=your_api_key_here" > .env
 
 # Run the server
 uvicorn main:app --reload
+
+### 2. Frontend (React)
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+npm start

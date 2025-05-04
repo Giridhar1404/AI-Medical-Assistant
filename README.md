@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🩺 AI-Based Healthcare Assistance System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an **AI-powered web application** that provides instant medical insights such as disease diagnosis, drug information, and disease-related data using natural language input. It integrates a **React.js** frontend with a **FastAPI** backend, and utilizes the **OpenRouter API** for AI-generated medical responses.
 
-## Available Scripts
+## 🌐 Features
 
-In the project directory, you can run:
+- 🔍 **Symptom-Based Disease Diagnosis**  
+  Input symptoms (e.g., *cold, cough, fever*) and receive possible medical conditions with causes, severity levels, and treatment suggestions.
 
-### `npm start`
+- 💊 **Drug Information Lookup**  
+  Search any drug (e.g., *Paracetamol, Metformin*) to get its use, dosage, side effects, precautions, and alternatives.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🧬 **Disease Insights**  
+  Enter a disease name (e.g., *Diabetes*) to obtain a comprehensive overview: symptoms, causes, medications, lifestyle advice, and prevention.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Component      | Technology       |
+|----------------|------------------|
+| Frontend       | React.js         |
+| Backend        | FastAPI          |
+| AI Model       | OpenRouter API (GPT-4 Turbo or Claude-3) |
+| Styling        | CSS              |
+| Deployment     | Localhost / Future: Render / Vercel / Railway |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Installation & Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js
+- Python 3.8+
+- Virtualenv (optional but recommended)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Backend (FastAPI)
 
-### `npm run eject`
+```bash
+# Clone the repository
+git clone https://github.com/your-username/healthcare-ai-assistant.git
+cd healthcare-ai-assistant/backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Create virtual environment and activate it
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+pip install -r requirements.txt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Set up .env
+echo "OPENROUTER_API_KEY=your_api_key_here" > .env
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run the server
+uvicorn main:app --reload
